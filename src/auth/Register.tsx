@@ -2,7 +2,7 @@
 
 const Register = () => {
   return (
-    <div>
+    <div className="max-w-6xl mx-auto">
       register
     </div>
   )

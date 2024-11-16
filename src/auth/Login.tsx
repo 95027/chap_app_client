@@ -1,7 +1,7 @@
 
 const Login = () => {
   return (
-    <div>
+    <div className="max-w-6xl mx-auto">
       login
     </div>
   )
