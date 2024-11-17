@@ -5,7 +5,7 @@ import Register from "./auth/Register";
 
 const AppRoutes = () => {
   return (
-    <div>
+    <div className="mb-5">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

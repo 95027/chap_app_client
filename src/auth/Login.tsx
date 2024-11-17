@@ -1,4 +1,5 @@
 import { useForm, SubmitHandler } from "react-hook-form";
+import { NavLink } from "react-router-dom";
 
 type LoginDetails = {
   email: string;
@@ -15,8 +16,8 @@ const Login = () => {
   const onSubmit: SubmitHandler<LoginDetails> = (data) => console.log(data);
 
   return (
-    <div className="max-w-6xl mx-auto text-primary">
-      <div className="card shadow-md mx-auto w-full max-w-screen-sm p-5 rounded-md">
+    <div className="max-w-6xl mx-auto">
+      <div className="card shadow-md mx-auto w-full max-w-md p-5 rounded-md">
         <div className="flex items-center justify-center mb-3">
           <h2 className="text-primary font-bold text-2xl">Login Form</h2>
         </div>
@@ -51,13 +52,16 @@ const Login = () => {
               </span>
             )}
           </div>
-          <div className="flex items-center justify-end">
+          <div className="flex items-center justify-end mt-5">
             <button
               type="submit"
-              className="btn bg-blue-600 rounded-md px-3 py-1 text-white"
+              className="btn bg-primary w-full rounded-md px-3 py-1 text-white"
             >
               Submit
             </button>
+          </div>
+          <div className="flex items-center justify-center mt-3">
+            <p>Don't Have Any Account? <NavLink to={"/register"} className={'text-primary'}>Register</NavLink></p>
           </div>
         </form>
       </div>
