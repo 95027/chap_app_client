@@ -1,5 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 type LoginDetails = {
   email: string;
@@ -13,7 +14,9 @@ const Login = () => {
     formState: { errors },
   } = useForm<LoginDetails>();
 
-  const onSubmit: SubmitHandler<LoginDetails> = (data) => console.log(data);
+  const { login } = useAuth();
+
+  const onSubmit: SubmitHandler<LoginDetails> = (data) => login(data);
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -30,6 +33,7 @@ const Login = () => {
               type="email"
               className="w-full p-1 mt-1"
               placeholder="Enter your email"
+              value={"sai@mail.com"}
               {...register("email", { required: true })}
             />
             {errors.email && (
@@ -44,6 +48,7 @@ const Login = () => {
               type="password"
               className="w-full p-1 mt-1"
               placeholder="Enter your password"
+              value={"password"}
               {...register("password", { required: true })}
             />
             {errors.password && (
@@ -61,7 +66,12 @@ const Login = () => {
             </button>
           </div>
           <div className="flex items-center justify-center mt-3">
-            <p>Don't Have Any Account? <NavLink to={"/register"} className={'text-primary'}>Register</NavLink></p>
+            <p>
+              Don't Have Any Account?{" "}
+              <NavLink to={"/register"} className={"text-primary"}>
+                Register
+              </NavLink>
+            </p>
           </div>
         </form>
       </div>
