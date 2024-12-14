@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { CgLogOut } from "react-icons/cg";
 
 const Header = () => {
   const { currentUser, logout } = useAuth();
@@ -10,9 +11,9 @@ const Header = () => {
       </h2>
       <div className="flex items-center justify-end w-full">
         {currentUser ? (
-          <button onClick={logout}> Logout</button>
+          <button onClick={logout} className="text-2xl"> <CgLogOut/></button>
         ) : (
-          <NavLink to={"login"}>Login</NavLink>
+          <NavLink to={"login"} className="text-2xl"><CgLogOut/></NavLink>
         )}
       </div>
     </div>
