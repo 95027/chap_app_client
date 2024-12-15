@@ -20,7 +20,7 @@ const Login = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="card shadow-md mx-auto w-full max-w-md p-5 rounded-md">
+      <div className="card shadow-md mx-auto w-full max-w-md p-5 rounded-md bg-white">
         <div className="flex items-center justify-center mb-3">
           <h2 className="text-primary font-bold text-2xl">Login Form</h2>
         </div>
@@ -31,7 +31,7 @@ const Login = () => {
             </label>
             <input
               type="email"
-              className="w-full p-1 mt-1"
+              className="w-full p-1 mt-1 bg-slate-100"
               placeholder="Enter your email"
               value={"sai@mail.com"}
               {...register("email", { required: true })}
@@ -46,7 +46,7 @@ const Login = () => {
             </label>
             <input
               type="password"
-              className="w-full p-1 mt-1"
+              className="w-full p-1 mt-1 bg-slate-100"
               placeholder="Enter your password"
               value={"password"}
               {...register("password", { required: true })}

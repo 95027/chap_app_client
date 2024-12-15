@@ -3,9 +3,9 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="bg-slate-100 h-screen flex flex-col pb-5">
+    <div className="flex flex-col pb-5">
       <Header />
-      <div className="flex-1 overflow-hidden">
+      <div className="flex-1">
         <AppRoutes />
       </div>
     </div>

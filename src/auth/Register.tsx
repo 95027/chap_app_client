@@ -35,7 +35,7 @@ const Register = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="card shadow-md mx-auto w-full max-w-md p-5 rounded-md">
+      <div className="card shadow-md mx-auto w-full max-w-md p-5 rounded-md bg-white">
         <div className="flex items-center justify-center mb-3">
           <h2 className="text-primary font-bold text-2xl">Registration Form</h2>
         </div>
@@ -46,7 +46,7 @@ const Register = () => {
             </label>
             <input
               type="text"
-              className="w-full p-1 mt-1"
+              className="w-full p-1 mt-1 bg-slate-100"
               placeholder="Enter your name"
               {...register("name", { required: true })}
             />
@@ -60,7 +60,7 @@ const Register = () => {
             </label>
             <input
               type="email"
-              className="w-full p-1 mt-1"
+              className="w-full p-1 mt-1 bg-slate-100"
               placeholder="Enter your email"
               {...register("email", { required: true })}
             />
@@ -74,7 +74,7 @@ const Register = () => {
             </label>
             <input
               type="password"
-              className="w-full p-1 mt-1"
+              className="w-full p-1 mt-1 bg-slate-100"
               placeholder="Enter your password"
               {...register("password", { required: true })}
             />
