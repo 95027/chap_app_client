@@ -3,7 +3,7 @@ import blank_user from "../../public/blank_user.jpg";
 import { useEffect, useState } from "react";
 import axiosInstance from "../axiosInstance";
 
-const Sidebar = ({setSelectedUser}: {setSelectedUser:any}) => {
+const Sidebar = ({ setSelectedUser }: { setSelectedUser: any }) => {
   const [users, setUsers] = useState([]);
 
   const getAllUsers = async () => {
@@ -33,8 +33,8 @@ const Sidebar = ({setSelectedUser}: {setSelectedUser:any}) => {
         {users?.map((user: any) => {
           return (
             <li
-              key={user?.id}
-              className="bg-white rounded shadow cursor-pointer font-medium flex items-center justify-center text-primary"
+              key={user?._id}
+              className={`bg-white rounded shadow cursor-pointer font-medium flex items-center justify-center text-primary`}
               onClick={() => setSelectedUser(user?._id)}
             >
               <span className="w-[40px]">

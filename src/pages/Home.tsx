@@ -11,7 +11,11 @@ const Home = () => {
       <div className="bg-white w-full max-w-72">
         <Sidebar setSelectedUser={setSelectedUser} />
       </div>
-      {selectedUser ? <Messages /> : <DefaultMessage />}
+      {selectedUser ? (
+        <Messages selectedUser={selectedUser} />
+      ) : (
+        <DefaultMessage />
+      )}
     </div>
   );
 };

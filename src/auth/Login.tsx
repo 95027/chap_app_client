@@ -33,7 +33,7 @@ const Login = () => {
               type="email"
               className="w-full p-1 mt-1 bg-slate-100"
               placeholder="Enter your email"
-              value={"sai@mail.com"}
+              // value={"user2@mail.com"}
               {...register("email", { required: true })}
             />
             {errors.email && (
@@ -48,7 +48,7 @@ const Login = () => {
               type="password"
               className="w-full p-1 mt-1 bg-slate-100"
               placeholder="Enter your password"
-              value={"password"}
+              // value={"password2"}
               {...register("password", { required: true })}
             />
             {errors.password && (
