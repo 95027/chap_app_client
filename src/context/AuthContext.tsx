@@ -41,6 +41,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     try {
       const res = await axiosInstance.post("auth/logout");
       if (res?.data) {
+        setCurrentUser(undefined);
         navigate("login");
       }
     } catch (error: any) {
