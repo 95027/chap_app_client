@@ -3,7 +3,7 @@ import { io, Socket } from "socket.io-client";
 let socket: Socket;
 
 export const connectSocket = () => {
-  socket = io("/socket.io", {
+  socket = io(import.meta.env.VITE_SOCKET_URL, {
     withCredentials: true,
   });
 
