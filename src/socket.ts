@@ -3,7 +3,7 @@ import { io, Socket } from "socket.io-client";
 let socket: Socket;
 
 export const connectSocket = () => {
-  socket = io("https://apichat.vercel.app", {
+  socket = io("/socket.io", {
     withCredentials: true,
   });
 
